@@ -1,0 +1,70 @@
+/* Основні */
+.list {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+ul {
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none
+}
+
+body {
+    font-family: $fontFamily;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    background-color: var(--primary-color-white);
+    color: var(--primary-text-color);
+}
+
+section {
+    padding-top: 94px;
+}
+
+.container{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.logo{
+    color: var(--accent-color);
+    font-family: $fontLogo;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+}
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
