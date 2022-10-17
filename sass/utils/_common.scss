@@ -37,23 +37,33 @@ body {
 }
 
 section {
-    padding-top: 94px;
+    padding-top: 60px;
+    
+    @media screen and (min-width: 1200px){
+    padding-top: 94px;}
 }
 
 .container{
-    width: 1200px;
+    max-width: 480px;
+    min-width: 320px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
+
+@media screen and (min-width: 768px){
+    max-width: 768px;
+}
+
+@media screen and (min-width: 1200px) {
+    max-width: 1200px;
+}
 }
 
 .logo{
     color: var(--accent-color);
     font-family: $fontLogo;
     font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
 }
 
 .visually-hidden {

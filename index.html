@@ -16,7 +16,45 @@
     <header class="header">
        <div class="header__wrap container">
         <a href="#" class="logo header__logo">Web<span class="header__logo--decor">Studio</span></a>
-           <nav class="header__nav">
+        
+        <button class="header-mobile__toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+         <svg viewBox="0 0 32 32" width="40" height="40" class="header__mobile-icon">
+        <use href="images/icons.svg#icon-menu"></use>
+        </svg>
+        </button>
+
+          <div class="header-mobile__wrap js-menu-container" id="mobile-menu">
+          <button
+            class="header-mobile__toggle header-mobile__toggle--close js-close-menu"
+            type="button"
+            aria-disabled="false"
+            aria-controls="mobile-close-menu"
+          >
+        <svg viewBox="0 0 32 32" width="40" height="40">
+        <use href="images/icons.svg#icon-close_40px"></use>
+        </svg>
+          </button>
+
+          <ul class="header-mobile__list list">
+          <li><a href="#" class="header-mobile__item current">Студія</a></li>
+          <li><a href="portfolio.html" class="header-mobile__item">Портфоліо</a></li>
+          <li><a href="#" class="header-mobile__item">Контакти</a></li>
+        </ul>
+
+        <ul class="header-mobile__contacts list">
+        <li><a href="tel:+380961111111" class="header-mobile__contacts-tel">+38 096 111 11 11</a></li> 
+        <li><a href="mailto:info@devstudio.com" class="header-mobile__contacts-link">info@devstudio.com</a></li>
+        </ul>
+
+        <ul class="header-mobile__link list">
+          <li><a href="#" class="header-mobile__link-item">Instagram</a></li>
+          <li><a href="#" class="header-mobile__link-item">Twitter</a></li>
+          <li><a href="#" class="header-mobile__link-item">Facebook</a></li>
+          <li><a href="#" class="header-mobile__link-item">LinkedIn</a></li>
+        </ul>
+        </div>
+
+        <nav class="header__nav">
         <ul class="header__list list">
           <li><a href="#" class="header__item current">Студія</a></li>
           <li><a href="portfolio.html" class="header__item">Портфоліо</a></li>
@@ -96,19 +134,37 @@
         <ul class="work__list list">
           <li class="work__item">
             <div class="work__details">
-            <img src="images/desktop.jpg" alt="Десктопні додатки" width="370" />
+            <img 
+            srcset="
+            images/desktop-370.jpg 370w,
+            images/desktop-740.jpg 740w,
+            "
+            src="images/desktop-370.jpg" 
+            alt="Десктопні додатки" />
           <h3 class="work__text">Десктопні додатки</h3>
         </div>
           </li>
           <li class="work__item">
             <div class="work__details">
-            <img src="images/mobile.jpg" alt="Мобільні додатки" width="370" />
+            <img 
+            srcset="
+            images/mobile-370.jpg 370w,
+            images/mobile-740.jpg 740w,
+            "
+            src="images/mobile-370.jpg"  
+            alt="Мобільні додатки" />
           <h3 class="work__text">Мобільні додатки</h3>
           </div>
           </li>
           <li class="work__item">
             <div class="work__details">
-            <img src="images/design.jpg" alt="Дизайнерські рішення" width="370" />
+            <img 
+            srcset="
+            images/design-370.jpg 370w,
+            images/design-740.jpg 740w,
+            "
+            src="images/design-370.jpg" 
+            alt="Дизайнерські рішення" />
           <h3 class="work__text">Дизайнерські рішення</h3>
           </div>
           </li>
@@ -122,7 +178,18 @@
         <h2 class="team__title">Наша команда</h2>
         <ul class="team__list list">
           <li class="team__item">
-            <img src="images/demianenko.jpg" alt="Фотографія Ігоря Дем'яненко" width="270" />
+            <img 
+            srcset="
+            images/demianenko-450.jpg 450w,
+            images/demianenko-900.jpg 900w,
+            images/demianenko-354.jpg 354w,
+            images/demianenko-708.jpg 708w,
+            images/demianenko-270.jpg 270w,
+            images/demianenko-540.jpg 540w
+            "
+            src="images/demianenko-450.jpg" 
+            sizes="(min-width: 1199px) 270px, (min-width: 481px) 354px, 450px"
+            alt="Фотографія Ігоря Дем'яненко" />
             <div class="team__item-wrap">
             <h3 class="team__name">Ігор Дем'яненко</h3>
             <p class="team__text">Product Designer</p>
@@ -155,7 +222,18 @@
           </div>
           </li>
           <li class="team__item">
-            <img src="images/repina.jpg" alt="Фотографія Ольги Рєпіной" width="270" />
+                       <img 
+            srcset="
+            images/repina-450.jpg 450w,
+            images/repina-900.jpg 900w,
+            images/repina-354.jpg 354w,
+            images/repina-708.jpg 708w,
+            images/repina-270.jpg 270w,
+            images/repina-540.jpg 540w
+            "
+            src="images/repina-450.jpg" 
+            sizes="(min-width: 1199px) 270px, (min-width: 481px) 354px, 450px"
+            alt="Фотографія Ольги Рєпіной" />
             <div class="team__item-wrap">
             <h3 class="team__name">Ольга Рєпіна</h3>
             <p class="team__text">Frontend Developer</p>
@@ -188,7 +266,18 @@
           </div>
           </li>
           <li class="team__item">
-            <img src="images/tarasov.jpg" alt="Фотографія Миколи Тарасова" width="270" />
+            <img 
+            srcset="
+            images/tarasov-450.jpg 450w,
+            images/tarasov-900.jpg 900w,
+            images/tarasov-354.jpg 354w,
+            images/tarasov-708.jpg 708w,
+            images/tarasov-270.jpg 270w,
+            images/tarasov-540.jpg 540w
+            "
+            src="images/tarasov-450.jpg" 
+            sizes="(min-width: 1199px) 270px, (min-width: 481px) 354px, 450px"
+            alt="Фотографія Миколи Тарасова" />
             <div class="team__item-wrap">
             <h3 class="team__name">Микола Тарасов</h3>
             <p class="team__text">Marketing</p>
@@ -221,7 +310,18 @@
           </div>
           </li>
           <li class="team__item">
-            <img src="images/ermakov.jpg" alt="Фотографія Михайла Єрмакова" width="270" />
+            <img 
+            srcset="
+            images/ermakov-450.jpg 450w,
+            images/ermakov-900.jpg 900w,
+            images/ermakov-354.jpg 354w,
+            images/ermakov-708.jpg 708w,
+            images/ermakov-270.jpg 270w,
+            images/ermakov-540.jpg 540w
+            "
+            src="images/ermakov-450.jpg" 
+            sizes="(min-width: 1199px) 270px, (min-width: 481px) 354px, 450px"
+            alt="Фотографія Михайла Єрмакова" />
             <div class="team__item-wrap">
             <h3 class="team__name">Михайло Єрмаков</h3>
             <p class="team__text">UI Designer</p>
@@ -449,5 +549,12 @@
 
     </div>
     <script src="./js/modal.js"></script>
+     <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

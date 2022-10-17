@@ -6,22 +6,44 @@
 }
 
 .footer__wrap {
+   text-align: center;
+
+    @media screen and (min-width: 768px){
     display: flex;
+    flex-wrap: wrap;
     align-items: baseline;
+    justify-content: center;
+    }
+   
+    @media screen and (min-width: 1200px){
+    text-align: inherit;
+    }
 }
 
 
 .footer__logo {
     display: block;
     margin-bottom: 20px;
-    
+     font-size: 24px;
+    line-height: 1.17;
+
+     @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.19;
+    }
+
     &--decor {
     color: var(--primary-color-white);
 }  
 }
 
 .footer__list :not(:last-child) {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
+
+    @media screen and (min-width: 1200px){
+     margin-bottom: 9px;   
+    }
+    
 }
 
 .footer__address {
@@ -50,7 +72,17 @@
 
 /* Підписка */
 .footer__follow {
-    margin: 0 93px 0 70px;
+    margin: 60px 0px;
+
+    @media screen and (min-width: 768px){
+        margin: 0px 0px;
+        margin-left: 165px;
+    }
+
+    @media screen and (min-width: 1200px){
+    margin: 0 93px 0 70px;   
+    }
+
 }
 
 .footer__follow-title {
@@ -63,11 +95,11 @@
     color: var(--primary-color-white);
 }
 
-.footer__follow-list {
-    margin-top: 20px;
-    width: 206px;
-    height: 44px;
+.footer__follow-list { 
     display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    height: 44px;
 }
 
 .footer__follow-item:not(:last-child) {
@@ -100,6 +132,10 @@
 .footer__mailing-container {
     display: flex;
     flex-direction: column;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px){
+    margin-top: 60px;
+    }
 }
 
 .footer__mailing-title {
@@ -111,16 +147,31 @@
     margin-bottom: 20px;
 }
 
+.footer__mailing-form{
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+}
+
 .footer__mailing-input {
-    background-color: transparent;
-    color: var(--primary-color-white);
-    width: 358px;
+    margin-bottom: 20px;
+    width: 450px;
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-    border-radius: 4px;
+    border-radius: 4px;    
+    background-color: transparent;
+    color: var(--primary-color-white);
     padding-left: 16px;
-    margin-right: 12px;
+
+
+    @media screen and (min-width: 1200px){
+    margin-right: 12px;    
+    width: 358px;
+    }
+
 }
 
 .footer__mailing-btn {

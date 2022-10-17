@@ -9,22 +9,37 @@
 }
 
 .header__logo {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size: 24px;
+    line-height: 1.17;
+
+    @media screen and (min-width: 768px){
+    margin-right: 87px;}
+
+    @media screen and (min-width: 1200px){
     margin-right: 93px;
+        font-size: 26px;
+        line-height: 1.19;
+}
 
    &--decor {
     color: var(--primary-text-color);
 } 
 }
 
-.header__list,
-.header__contacts {
+.header__list{
+display: none;
+
+
+    @media screen and (min-width: 768px){
     display: flex;
+
+    & :not(:last-child) {
+    margin-right: 50px;}
+}
 }
 
-
-.header__list :not(:last-child) {
-    margin-right: 50px;
-}
 .current {
     position: relative;
 }
@@ -37,7 +52,10 @@
     width: 100%;
     height: 4px;
     border-radius: 2px;
-    background-color: var(--accent-color);
+
+    @media screen and (min-width: 768px){
+      background-color: var(--accent-color);}
+    
 }
 
 .header__list .current {
@@ -61,8 +79,20 @@
 }
 
 .header__contacts {
-    margin-left: auto;
-    gap: 30px;
+        display: none;
+        
+
+        @media screen and (min-width: 768px) and (max-width: 1199px){
+          display: flex;  
+          flex-direction: column;
+          margin-left: auto;
+          gap: 10px;
+        }
+    
+        @media screen and (min-width: 1200px) {
+            display: flex;
+            margin-left: auto;
+            gap: 30px;}
 
     & :hover,
     &:focus {
@@ -74,13 +104,17 @@
 .header__contacts-link{
     display: flex;
     align-items: center;
-    padding: 32px 0;
+    
 
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--secondary-text-color);
     transition: color 250ms var(--primary-cubic);
+
+@media screen and (min-width: 1200px){
+    padding: 32px 0;
+}   
 
     &:hover svg,
     &:focus svg{
@@ -93,4 +127,6 @@
     fill: currentColor;
     transition: fill 250ms var(--primary-cubic);
 }
+
+
 

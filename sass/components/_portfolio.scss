@@ -1,13 +1,27 @@
 /* Портфоліо*/
 .portfolio {
-    padding-bottom: 94px;
+    padding-bottom: 60px;
+
+    @media screen and (min-width: 1200px){
+    padding-bottom: 94px;  
+    }
 }
 
 .potfolio__filters {
     display: flex;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    column-gap: 8px;
+    margin-bottom: 40px;
+
+    @media screen and (min-width: 768px){
     justify-content: center;
+    margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: 1200px){
     margin-bottom: 50px;
-    gap: 8px;
+    }
 }
 
 
@@ -42,7 +56,11 @@
 }
 
 .portfolio__item {
-    flex-basis: calc((100% - 2 * 30px) / 3);
+    @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 30px) / 2);}
+
+    @media screen and (min-width: 1200px){
+    flex-basis: calc((100% - 2 * 30px) / 3);}
 }
 
 .portfolio__link {
@@ -86,6 +104,11 @@
     padding: 20px 24px;
     border: 1px solid var(--border-portfolio);
     border-top: none;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px){
+        height: 146px;
+    }
+
 }
 
 .portfolio__name {
