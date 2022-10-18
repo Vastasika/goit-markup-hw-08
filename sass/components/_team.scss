@@ -44,6 +44,12 @@
     text-align: center;
 
     background-color: var(--primary-color-white);
+
+   
+    &:not(:last-child) {
+    @media screen and (max-width: 767px){
+    margin-bottom: 30px;
+    }}
 }
 
 .team__item-wrap {

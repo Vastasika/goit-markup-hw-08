@@ -9,6 +9,7 @@
     padding: 48px 40px;
     background-color:var(--primary-color-white);
     z-index: 999;
+    overflow-y: scroll;
 
     transform: translateX(100%);
     transition: transform 250ms var(--primary-cubic);
@@ -69,6 +70,10 @@
     font-size: 34px;
     line-height: 1.18;
     color: var(--accent-color);
+
+    @media screen and (max-width: 479px){
+    font-size: 25px;
+    }
 }
 
 .header-mobile__contacts-link{
@@ -86,6 +91,10 @@
     & :not(:last-child) {
     border-right: 1px solid rgba(33, 33, 33, 0.2);
     padding-right: 10px;
+    }
+
+    @media screen and (max-width: 479px){
+        flex-wrap: wrap;
     }
 }
 
